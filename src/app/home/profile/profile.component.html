@@ -1,0 +1,26 @@
+<div class="ProfileDetailsContainer" *ngIf="username">
+  <div class="ProfileDetails">
+    <img class="userAvatar" [src]="username.avatar_url" alt="User Avatar">
+    <div class="Details">
+      <p><span>Bio:</span> {{username.bio}}</p>
+      <p><span>Name:</span> {{username.name}}</p>
+      <p><span>Username:</span> {{username.login}}</p>
+      <p><span>Location:</span> {{username.location}}</p>
+      <p><span>E-mail:</span> {{username.email}}</p>
+      <p><span>Followers:</span> {{username.followers}}</p>
+      <p><span>Following:</span> {{username.following}}</p>
+      <p><span>Member Since:</span> {{username.created_at}}</p>
+      <p><span>Last Update:</span> {{username.updated_at}}</p>
+      <p><span>Public Gists:</span> {{username.public_gists}}</p>
+      <p><span>Public Repos:</span> {{username.public_repos}}</p>
+      <p><span>Company:</span> {{username.company}}</p>
+      <p><span>GitHub:</span> {{username.html_url}}</p>
+      <p><span>Blog Link:</span> {{username.blog}}</p>
+      <p><span>Twitter:</span> {{username.twitter_username}}</p>
+      <p><span>ID:</span> {{username.id}}</p>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

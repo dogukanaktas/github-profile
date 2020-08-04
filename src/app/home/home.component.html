@@ -1,0 +1,43 @@
+<div class="homeContainer">
+  <input type="text" [(ngModel)]="profile" (ngModelChange)="detectChange($event)" (keyup)="findProfile()" class="input">
+
+  <ng-template [ngIf]="profile !== '' && user">
+    <div class="profileContainer">
+      <div class="leftDetails">
+        <img class="userAvatar" [src]="user.avatar_url" alt="User Avatar">
+        <div>
+          <button class="button" [routerLink]="['', user.login.toLowerCase(), user.id ]">View
+            Profile</button>
+          <button class="button" *ngIf="display.length < 5" (click)="addLocal()">Add to
+            Favorite</button>
+        </div>
+      </div>
+      <div class="rightDetails">
+        <p><span>Username: </span> {{user.login}}</p>
+        <p><span>Location:</span> {{user.location}}</p>
+        <p><span>E-mail:</span> {{user.email}}</p>
+        <p><span>Blog Link:</span> {{user.blog}}</p>
+        <p><span>Member Since:</span> {{user.created_at}}</p>
+      </div>
+    </div>
+  </ng-template>
+  <div *ngIf="closeDiv">
+    <div class="profileContainer" *ngFor="let item of display">
+      <div class="leftDetails">
+        <img class="userAvatar" [src]="item.avatar_url" alt="User Avatar">
+        <div>
+          <button class="button" [routerLink]="['', item.login.toLowerCase(), item.id ]">View Profile</button><br>
+          <button class="button" (click)="removeLocal(item.id,item.storageKey)">Remove Favorite</button>
+        </div>
+      </div>
+      <div class="rightDetails">
+        <p><span>Username:</span> {{item.login}}</p>
+        <p><span>Location:</span> {{item.location}}</p>
+        <p><span>E-Mail:</span> {{item.email}}</p>
+        <p><span>Blog Link:</span> {{item.blog}}</p>
+        <p><span>Member Since:</span> {{item.created_at}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

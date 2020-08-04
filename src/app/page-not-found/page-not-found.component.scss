@@ -1,0 +1,20 @@
+.pageNotFoundContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 4em 0 7em 0;
+    width: 100%;
+    height: 100%;
+
+    .pageNotFound {
+        font-size: 6rem;
+        text-shadow: 1px 1px 3px #000000;
+    }
+    
+    .sorry {
+        font-size: 4rem;
+        text-shadow: 1px 1px 3px #000000;
+    }
+}
+

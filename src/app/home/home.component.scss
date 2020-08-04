@@ -1,0 +1,83 @@
+$primary: rgb(189, 189, 189);
+$borderColor: rgb(214, 209, 209);
+
+.homeContainer {
+  width: 100%;
+}
+
+.profileContainer {
+  display: flex;
+  padding: 1em;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  width: 50%;
+  margin: 1em auto;
+
+
+  .leftDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 30%;
+
+    .userAvatar {
+      width: 100%;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    .button {
+      padding: .3em 3em;
+      margin-top: 1em;
+      width: 100%;
+      color: rgb(78, 163, 212);
+      background-color: #fff;
+      border: 1px solid $borderColor;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .rightDetails {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    p {
+      font-size: .875em;
+      padding: .75em 1.25em;
+      border: 1px solid $borderColor;
+      border-bottom: .5px;
+
+      &:first-child {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom: 1px solid $borderColor;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }    
+  }
+}
+
+.input {
+  background-color: $primary;
+  width: 100%;
+  height: 10vh;
+  font-size: 2em;
+  font-weight: 500;
+  border: none;
+  margin-bottom: 1em;
+}
+
+.button.isActive {
+  display: none;
+}
+
