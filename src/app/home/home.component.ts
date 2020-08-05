@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
   user: any;
   profile: any;
   display: any;
-  randomNumber: number;
-  randomString: string;
   closeDiv: boolean = true;
 
   constructor(private userData: HttpService) {}
@@ -25,10 +23,6 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  public storageLength() {
-    Object.values(localStorage).length < 5;
-  }
-
   public findProfile() {
     this.userData.updateProfile(this.profile);
     this.userData.getUser().subscribe((result) => {
@@ -37,9 +31,7 @@ export class HomeComponent implements OnInit {
   }
 
   public addLocal() {
-    this.randomNumber = Math.floor(Math.random() * 10000);
-    this.randomString = this.randomNumber.toString();
-    this.user.storageKey = this.randomString;
+    this.user.storageKey = Math.floor(Math.random() * 10000).toString();
     localStorage.setItem(this.user.storageKey, JSON.stringify(this.user));
     this.display = Object.values(localStorage).map((val: any) =>
       JSON.parse(val)
