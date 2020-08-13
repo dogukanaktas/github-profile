@@ -1,6 +1,6 @@
 # GitHub Profile Search App
 
-> [Live Site](github-profile-search-angular.netlify.app "Go to the Angular App") 
+> [Live Site](https://github-profile-search-angular.netlify.app/ "Go to the Angular App") 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
 
