@@ -1,5 +1,7 @@
 # GitHub Profile Search App
 
+In this project, the user can search for github profiles, add or remove them as favorites, and access profile details.
+
 > [Live Site](https://github-profile-search-angular.netlify.app/ "Go to the Angular App") 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
