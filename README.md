@@ -4,8 +4,6 @@ In this project, the user can search for github profiles, add or remove them as 
 
 > [Live Site](https://github-profile-search-angular.netlify.app/ "Go to the Angular App") 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
